@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Bài tập ngày hôm nay</h1>
+<button onclick="dienTich()">Click vào đây!!</button>
+</body>
+</html>
+<script>
+    function dienTich()
+    {
+        let width = prompt('Nhập vào chiều rộng HCN:(cm) ');
+        let height = prompt("Nhập vào chiều dài HCN:(cm) ");
+        let tich = width * height;
+        document.write("Diện tích HCN là: " + tich +' cm^2');
+    }
+</script>

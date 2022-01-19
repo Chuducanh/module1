@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<table border="1" bgcolor="#ff1493" >
+    <tr>
+        <th>
+            <p>Số lượng mua</p>
+        </th>
+        <th>
+            <p>Giá mỗi sản phẩm mua vào</p>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <input type = "number" name = "soluongmua" id = "soluongmua">
+        </td>
+        <td>
+            <input type = "number" name = "giamua" id = "giamua">
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <p>Số lượng bán</p>
+        </th>
+        <th>
+            <p>Giá mỗi sản phẩm bán ra</p>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <input type = "number" name = "soluongban" id = "soluongban">
+        </td>
+        <td>
+            <input type = "number" name = "giaban" id = "giaban">
+        </td>
+    </tr>
+</table>
+<br>
+<button onclick = "result()">Kết quả đạt được </button>
+</body>
+<script>
+    function result()
+    {
+        let soluongmua = document.getElementById("soluongmua").value;
+        let giamua = document.getElementById("giamua").value;
+        let soluongban = document.getElementById("soluongban").value;
+        let giaban = document.getElementById("giaban").value;
+        let hoahong = parseInt(soluongban)*parseInt(giaban)-parseInt(soluongmua)*parseInt(giamua);
+        if (hoahong > 0)
+        {
+           alert("Bạn đã lời được " + hoahong);
+        }
+        else
+        {
+            let tienlo = -hoahong;
+            alert("Bạn đã bị lỗ " + tienlo);
+        }
+    }
+</script>
+</html>

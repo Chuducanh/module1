@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc với if...else...if</title>
+</head>
+<body>
+    <script>
+        let login = prompt("Vui lòng nhập tên: ");
+        if (login == "Admin")
+        {
+            let password = prompt("Vui lòng nhập mật khẩu: ");
+            {
+                if (password == "TheMaster")
+                {
+                    alert("Welcome!");
+                }
+                else if(password == "")
+                {
+                    alert("Canceled");
+                }
+                else
+                {
+                    alert("Wrong password");
+                }
+            }
+        }
+        else if (login == "")
+        {
+            alert("Canceled");
+        }
+        else
+        {
+            alert("I don't know you");
+        }
+    </script>
+</body>
+</html>

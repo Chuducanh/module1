@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11</title>
+</head>
+<body>
+    <table align="center" border="1" bgcolor="#ffc0cb">
+        <tr>
+            <th>Bậc</th>
+            <th>Mức thuế</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>4 triệu đồng/tháng 0%</td>
+        </tr>
+        <tr>
+            <td>2 </td>
+            <td>Trên 4 - 6 triệu đồng/tháng: 5%</td>
+        </tr>
+        <tr>
+            <td>3 </td>
+            <td>Trên 6 - 9 triệu đồng: 10%</td>
+        </tr>
+        <tr>
+            <td>4 </td>
+            <td>Trên 9 - 14 triệu đồng/tháng: 15%</td>
+        </tr>
+        <tr>
+            <td>5 </td>
+            <td>trên 14 - 24 triệu đồng/tháng: 20%</td>
+        </tr>
+        <tr>
+            <td>6 </td>
+            <td>Trên 24 - 44 triệu đồng/tháng: 25%</td>
+        </tr>
+        <tr>
+            <td>7 </td>
+            <td>Trên 44 - 84 triệu đồng/tháng: 30%</td>
+        </tr>
+        <tr>
+            <td>8 </td>
+            <td>Trên 84 triệu đồng: 35%</td>
+        </tr>
+    </table>
+    <br><br>
+    <table align = "center">
+        <tr>
+            <th>
+                Nhập mức thu nhập của bạn (triệu đồng)
+            </th>
+            <th>
+                <input type = "number" id ="tien">
+            </th>
+        </tr>
+        <tr>
+            <td colspan="2" align="right">
+                <button onclick="thue()">Tính thuế</button>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function thue() {
+        let tien = document.getElementById("tien").value;
+        if(tien<=4)
+        {
+            alert("Bạn không phải nộp thuế");
+        }
+        else if(tien<=6)
+        {
+            alert("Bạn phải nộp thuế là: " + (tien*5/100) + " triệu đồng");
+        }
+        else if(tien<=9)
+        {
+            alert("Bạn phải nộp thuế là: " + (tien*10/100) + " triệu đồng");
+        }
+        else if(tien<=14)
+        {
+            alert("Bạn phải nộp thuế là: " + (tien*15/100) + " triệu đồng");
+        }
+        else if(tien<=24)
+        {
+            alert("Bạn phải nộp thuế là: " + (tien*20/100) + " triệu đồng");
+        }
+        else if(tien<=44)
+        {
+            alert("Bạn phải nộp thuế là: " + (tien*25/100) + " triệu đồng");
+        }
+        else if(tien<=84)
+        {
+            alert("Bạn phải nộp thuế là: " + (tien*30/100) + " triệu đồng");
+        }
+        else alert("Bạn phải nộp thuế là: " + (tien*35/100) + " triệu đồng");
+    }
+</script>
+</html>

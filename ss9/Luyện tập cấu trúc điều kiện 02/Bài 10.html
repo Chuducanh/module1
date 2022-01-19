@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10</title>
+</head>
+<body>
+<table border="1px" align="center" width="300px" height="300px">
+    <tr>
+        <th colspan="2" bgcolor="#ffc0cb">
+            Bảng tính tiền điện
+        </th>
+    </tr>
+    <tr>
+        <th>Số lượng</th>
+        <th>Tiền trên 1 số</th>
+    </tr>
+    <tr>
+        <td>100 số đầu</td>
+        <td>1000đ</td>
+    </tr>
+    <tr>
+        <td>Từ 101 đến 150</td>
+        <td>2000đ</td>
+    </tr>
+    <tr>
+        <td>Từ 151 đến 200</td>
+        <td>2500đ</td>
+    </tr>
+    <tr>
+        <td>Từ 200 trở lên</td>
+        <td>3000đ</td>
+    </tr>
+</table>
+<br><br>
+<table align="center">
+    <tr>
+        <td>Số công tơ điện tháng trước:</td>
+        <td><input type="number" id="sotruoc" name="sotruoc"></td>
+    </tr>
+    <tr>
+        <td>
+            Số công tơ điện tháng này:
+        </td>
+        <td><input type="number" id="sosau" name="sosau"></td>
+    </tr>
+    <tr>
+        <th colspan="2" >
+            <button onclick='tinhtien()' >TÍNH TIỀN</button>
+        </th>
+    </tr>
+</table>
+</body>
+<script>
+    function tinhtien()
+    {
+        let sotruoc = document.getElementById("sotruoc").value;
+        let sosau = document.getElementById("sosau").value;
+        let total = parseInt(sosau) - parseInt(sotruoc);
+        if (total <=100)
+        {
+            alert("Số tiền của bạn là " + total*1000)
+        }
+        else if(total <=150)
+        {
+            alert("Số tiền của bạn là " + (100*1000+(total-100)*2000));
+        }
+        else if(total <=200)
+        {
+            alert("Số tiền của bạn là: " + (100*1000+50*2000+(total-150)*2500));
+        }
+        else alert("Số tiền của bạn là" + (100*1000+50*2000+50*2500+(total-200)*3000));
+    }
+</script>
+</html>

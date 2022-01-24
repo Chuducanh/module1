@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<form action="">
+    Nhật vào chiều dài: <input type="text" id="width" placeholder="Nhập vào ô này">;
+    <br>
+    <br>
+    Nhập vào chiều rộng: <input type="text" id="height" placeholder="Nhập vào ô này">;
+    <br>
+    <br>
+    <input type="button" value="In hình" onclick="inHCN()"> <br>
+    <text id="t_in_hcn"></text>
+</form>
+</body>
+<script>
+    function inHCN() {
+        let width = parseInt(document.getElementById(`width`).value);
+        let height = parseInt(document.getElementById(`height`).value);
+        let text = ``;
+        if (isNaN(width) || isNaN(height)){
+            alert(`Error!`);
+        } else if (width % 1 !== 0 || height % 1 !== 0){
+            alert(`Error!`);
+        } else if (width < 1 || height < 1){
+            alert(`Error!`);
+        } else {
+            let i;
+            for (i = 1; i <= height; i++){
+                for (let j = 1; j <= width; j++) {
+                    if (i === 1 || height === i || j === 1 || width === j){
+                        text += `*`;
+                    } else {
+                        text += `&ensp;`;
+                    }
+                }
+                text +="<br>";
+            }
+            document.write(text);
+        }
+    }
+</script>
+</html>

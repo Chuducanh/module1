@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<h1>TRÒ CHƠI ĐOÁN SỐ</h1>
+<input type="text" id="startNumber" placeholder="Số đầu">
+<input type="text" id="endNumber" placeholder="Số cuối">
+<h3>Bạn được quyền đoán 3 lần, chúc may mắn <3</h3>
+<input type="button" value="Bắt đầu" onclick="RandomGame()">
+<script>
+    function RandomGame()
+    {
+        let startNumber = parseInt(document.getElementById('startNumber').value);
+        let endNumber = parseInt(document.getElementById('endNumber').value);
+        let a = random(startNumber, endNumber);
+        let i = 1;
+        let count = 0;
+
+        for(i; i<=3; i++)
+        {
+            let guessNumber = parseInt(prompt("Nhập vào số muốn chơi: "));
+            if(guessNumber === a)
+            {
+                alert("Thắng cuộc !!!");
+                break;
+            }
+            count += 1;
+        }
+            if(count === 3)
+            {
+                alert("Bạn thua gòi :<");
+            }
+        }
+
+    function random(startNumber, endNumber)
+    {
+        return Math.floor(Math.random()*(endNumber - startNumber +1)) + startNumber;
+    }
+</script>
+</body>
+</html>

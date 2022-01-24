@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<h2 align = "center" >Chương trình tính lãi ngân hàng</h2>
+<table align = "center" border = 1px style="background-color:pink; border-collapse:collapse" width = "50%" height= "100px">
+    <tr>
+        <td>Nhập số tiền ban đầu: </td>
+        <td><input type = "number" id ="goc" placeholder = "VND"></td>
+    </tr>
+    <tr>
+        <td>Nhập lãi suất hàng tháng: </td>
+        <td><input type = "number" id ="lai" placeholder = "%"></td>
+    </tr>
+    <tr>
+        <td>Số tháng cho vay: </td>
+        <td><input type = "number" id ="thoiGian" placeholder = "Tháng"></td>
+    </tr>
+    <tr style = "background-color: white">
+        <th colspan = "2"><button onclick ="Tinh()">Tính số tiền cần trả</button></th>
+    </tr>
+</table>
+</body>
+<script>
+    function Tinh()
+    {
+        let goc = parseInt(document.getElementById("goc").value);
+        let lai = parseInt(document.getElementById("lai").value);
+        let thoiGian = parseInt(document.getElementById("thoiGian").value);
+        let money = goc * Math.pow(((100+lai)/100),thoiGian);
+        alert("Số tiền bạn cần trả là: " + money)
+    }
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let n1 = 0, n2 = 1, temp, sum=1;
+    let count = 20;
+    for (let i = 1; i <= count; i++) {
+        temp = n1 + n2;
+        n1 = n2;
+        n2 = temp;
+        sum = sum + temp;
+    }
+    document.write(sum);
+</script>
+</body>
+</html>

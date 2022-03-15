@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(doC, doK, doF){
+            this.doC = doC;
+            this.doK = doK;
+            this.doF = doF;
+        }
+        transferF()
+        {
+            this.doF = this.doC*1.8+32;
+            alert(this.doF);
+        }
+        transferK()
+        {
+            this.doK = this.doC + 273;
+            alert(this.doK);
+        }
+    }
+    let nhietdo = new Temperature(25);
+    nhietdo.transferF();
+    nhietdo.transferK();
+</script>
+</body>
+</html>

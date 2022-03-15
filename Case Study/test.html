@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--    <input type="text" id="word" >-->
+<!--    <button onclick="convert()">Submit</button>-->
+    <input type="text" id="product" placeholder="Enter new product">
+    <button onclick="createNewProduct()">ADD</button>
+        <div id="content">
+        </div>
+<script>
+    //     let n = parseInt(prompt("Nhập vào độ dài của mảng: "));
+    //     let arr = [];
+    //     while ( n > 10 || n < 1){
+    //         n = parseInt(prompt("Bạn nhập sai rồi, Nhập lại độ dài: "));
+    //     }
+    //     for (let i = 0; i < n; i++){
+    //         arr[i] = prompt("Nhập phần tử thứ " + i);
+    //     }
+    //     console.log(arr);
+    let productList = ["iphone x", "samsung", "xiaomi", "nokia"];
+    function displayProduct(){
+        let table = '<table border="1px" style="border-collapse: collapse">' +
+            ' <tr> <th>Product Name</th> ' +
+            '<th>Action</th> </tr>';
+        for (let i = 0; i < productList.length; i++) {
+            table += '<tr><td>' + productList[i] + ' </td>' +
+                ' <td> <button onclick="editProduct(' + i + ')">Edit</button> </td>' +
+                ' <td> <button onclick="deleteProduct(' + i + ')">Delete</button> </td>' +
+                ' </tr>';
+        }
+        table += '</table>';
+        document.getElementById("content").innerHTML = table;
+    }
+    function deleteProduct(index) {
+        productList.splice(index, 1);
+        displayProduct();
+    }
+    function editProduct(index) {
+        productList[index] = prompt("Nhập lại tên product muốn chỉnh sửa: ");
+        displayProduct();
+    }
+    function createNewProduct() {
+        let product = document.getElementById("product").value;
+        productList.push(product);
+        displayProduct();
+        document.getElementById("product").value = "";
+    }
+    displayProduct();
+</script>
+</body>
+</html>

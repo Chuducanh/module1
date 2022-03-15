@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+<script>
+    class Mobile{
+        constructor()
+        {
+            this.pin = 98;
+            this.inbox = [];
+            this.sent = [];
+            this.status = true;
+        }
+        checkStatus()
+        {
+            if(this.status)
+            {
+                console.log("Điện thoại đang bật");
+            }
+            else{
+                console.log("Điện thoại đang tắt");
+            }
+        }
+        turnOnOff()
+        {
+            this.status = !this.status;
+        }
+        charge()
+        {
+            if(this.pin < 100)
+            {
+                for(let i = this.pin; i<100; i++ )
+                {
+                    i+=1;
+                    console.log(i + ", ");
+                }
+            }
+            else{
+                console.log("Pin điện thoại đã đầy");
+            }
+        }
+        receiveMessage()
+        {
+
+        }
+
+
+    }
+</script>
+</body>
+</html>

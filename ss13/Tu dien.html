@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<h2><center> Chu Duc Anh DICTIONARY</center></h2>
+<br>
+<table style align="center">
+    <th>
+        <td>
+            Nhập 1 từ Tiếng Anh
+        </td>
+        <td>
+            <input type="text" id="word">
+        </td>
+        <td>
+            <button onclick="Find()">Tìm kiếm</button>
+        </td>
+    </th>
+</table>
+
+<script>
+    let English = ["hello","cat","dog","chicken","table"];
+    let Vietnam = ["xin chào","con mèo","con chó","con gà","cái bàn"];
+    function Find()
+       {
+           let word = document.getElementById("word").value;
+           let dem = -1;
+           for (let i=0; i<English.length; i++)
+           {
+               if(English[i]===word)
+               {
+                   dem = i;
+                   break;
+               }
+           }
+           if (dem===-1) {
+               alert("Không tìm thấy từ, vui lòng nhập lại!");
+           }
+           else {
+               alert("Nghĩa của từ là: " + Vietnam[dem]);
+           }
+       }
+</script>
+</body>
+</html>

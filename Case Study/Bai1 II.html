@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lương của bạn</title>
+</head>
+<body>
+<table>
+   <tr>
+       <th>
+           Lương của bạn:
+       </th>
+       <td>
+           <input type="number" id = "salary">
+       </td>
+       <td>
+           <button onclick="transfer()">Hiển thị lương và thuế</button>
+       </td>
+   </tr>
+</table>
+<script>
+    function transfer()
+    {
+        let salary = document.getElementById("salary").value;
+        if(salary>15)
+        {
+            alert("Thuế của bạn là: " + (salary*0.2));
+            alert("Lương ròng của bạn là: " +(salary*0.8));
+        }
+        else if(salary>=7&&salary<15)
+        {
+            alert("Thuế của bạn là: " + (salary*0.1));
+            alert("Lương ròng của bạn là: " +(salary*0.9));
+        }
+        else
+        {
+            alert("Thuế của bạn là: " + (salary*0.05));
+            alert("Lương ròng của bạn là: " +(salary*0.95));
+        }
+    }
+</script>
+</body>
+</html>

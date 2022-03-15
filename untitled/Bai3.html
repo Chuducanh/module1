@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+<center>
+    <input type="button" value = "Thêm">
+    <input type="button" value = "Xóa">
+</center>
+<div id="content">
+</div>
+<script>
+    class SoTietKiem
+    {
+        constructor(mS, type, name, id, date, money) {
+            this.mS = mS;
+            this.type = type;
+            this.name = name;
+            this.id = id;
+            this.date = date;
+            this.money = money;
+        }
+
+        getMs()
+        {
+            return this.mS;
+        }
+        getType()
+        {
+            return this.mS;
+        }
+        getName()
+        {
+            return this.mS;
+        }
+        getId()
+        {
+            return this.mS;
+        }
+        getDate()
+        {
+            return this.mS;
+        }
+        getMoney()
+        {
+            return this.mS;
+        }
+        setMs(ms)
+        {
+            this.ms = ms;
+        }
+        setType(type)
+        {
+            this.type = type;
+        }
+        setName(name)
+        {
+            this.ms = ms;
+        }
+        setId(id)
+        {
+            this.id = id;
+        }
+        setDate(date)
+        {
+            this.date = date;
+        }
+        setMoney(money)
+        {
+            this.money = money;
+        }
+    }
+    let array = [];
+    let ms, type, name, date, money;
+
+    function display() {
+        let result = '<table border="1" style="border-collapse: collapse">\n' +
+            '<tr>\n' +
+            '<th>Mã sổ</th>\n' +
+            '<th>Loại tiết kiệm</th>\n' +
+            '<th>Họ tên khách hàng</th>\n' +
+            '<th>Chứng minh nhân dân</th>\n' +
+            '<th>Ngày mở sổ</th>\n' +
+            '<th>Số tiền gửi</th>\n' +
+            '</tr>';
+        for (let i = 0; i < arr.length; i++) {
+            result += '<tr> \n' +
+                '<td>' + arr[i].getMs() + '</td>\n' +
+                '<td>' + arr[i].getType() + '</td>\n' +
+                '<td>' + arr[i].getName() + '</td>\n' +
+                '<td>' + arr[i].getId() + '</td>\n' +
+                '<td>' + arr[i].getDate() + '</td>\n' +
+                '<td>' + arr[i].getMoney() + '</td>\n' +
+                '</tr>';
+        }
+        result += '</tabel>';
+        document.getElementById("result").innerHTML = result;
+    }
+
+
+</script>
+</body>
+</html>
